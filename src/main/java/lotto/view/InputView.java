@@ -45,8 +45,8 @@ public class InputView {
         return splitAndWrap(scanner.nextLine());
     }
 
-    private Set<LottoNumber> splitAndWrap(String winningNumbers) {
-        return Arrays.stream(winningNumbers.split(SEPARATOR))
+    private Set<LottoNumber> splitAndWrap(String lottoNumbers) {
+        return Arrays.stream(lottoNumbers.split(SEPARATOR))
                 .map(String::trim)
                 .map(InputView::convertToInt)
                 .map(LottoNumber::from)
